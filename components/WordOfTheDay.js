@@ -13,8 +13,6 @@ const {
 
 
 
-
-
 class WordOfTheDay extends Component{
 
   constructor(props) {
@@ -24,17 +22,6 @@ class WordOfTheDay extends Component{
     //     dataSource: ds.cloneWithRows([])
     // };
 }
-
-
-componentWillMount() {
-  // const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-  //   this.setState({
-  //       dataSource: ds.cloneWithRows(this.props.items)
-  //   });
-
-}
-
-
 
 
   render(){

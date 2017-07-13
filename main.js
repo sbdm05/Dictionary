@@ -42,11 +42,7 @@ const firebaseConfig = {
     storageBucket: "streetfrench-a84df.appspot.com",
     messagingSenderId: "551358813028"
 };
-const firebaseApp = firebase
-  .initializeApp(firebaseConfig)
-  ;
-
-
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 
 class FirebaseReactNative extends Component {
@@ -54,7 +50,6 @@ class FirebaseReactNative extends Component {
  static navigationOptions = {
     title: 'Street French !',
   };
-
 
 
   constructor(props) {
@@ -72,7 +67,6 @@ class FirebaseReactNative extends Component {
     this.itemsRef = this.getRef().child('items').limitToLast(4);
     this._handleResults = this._handleResults.bind(this);
   }
-
 
 
   getRef() {
@@ -113,7 +107,6 @@ class FirebaseReactNative extends Component {
 
  componentDidMount() {
     this.listenForItems(this.itemsRef);
-
   }
 
 
@@ -124,7 +117,8 @@ class FirebaseReactNative extends Component {
       return (
          <SplashScreen />
          )
-      }else{
+      }
+      else{
         return(
           <View style={styles.container}>
 
@@ -158,7 +152,6 @@ class FirebaseReactNative extends Component {
   }
 
 
-
 _renderItem(item) {
      const { navigate } = this.props.navigation;
      return (
@@ -175,14 +168,11 @@ _renderItem(item) {
 }
 
 
-
-
   _handleResults(results){
     this.setState({dataSource: this.state.dataSource.cloneWithRows(results)})
   }
 
 }
-
 
 
 const App = StackNavigator({

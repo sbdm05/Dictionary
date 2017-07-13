@@ -3,7 +3,6 @@ import ReactNative from 'react-native';
 const { View, TouchableHighlight, Text } = ReactNative;
 
 
-
 class ListOfWords extends Component {
   render() {
     return (
@@ -15,7 +14,6 @@ class ListOfWords extends Component {
     );
   }
 }
-
 
 
 export default ListOfWords;
