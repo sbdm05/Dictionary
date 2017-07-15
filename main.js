@@ -23,7 +23,8 @@ const {
   View,
   TouchableHighlight,
   TouchableOpacity,
-  Animated
+  Animated,
+  Switch
 } = ReactNative;
 
 
