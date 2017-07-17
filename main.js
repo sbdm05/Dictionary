@@ -12,7 +12,6 @@ import WordOfTheDay from './components/WordOfTheDay';
 import WelcomeSlides from './components/WelcomeSlides';
 import FirebaseReactNative from './FirebaseReactNative';
 import { List, ListItem } from 'react-native-elements';
-import SplashScreen from './components/SplashScreen';
 import Animation from 'lottie-react-native';
 const styles = require('./styles.js');
 
@@ -54,4 +53,3 @@ class App extends React.Component {
 }
 
 Expo.registerRootComponent(App);
-

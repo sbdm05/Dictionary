@@ -34,7 +34,7 @@ var styles = StyleSheet.create({
     borderColor: 'transparent',
     borderWidth: 1,
     justifyContent: 'center',
-    height: 0,
+    height: 44,
     flexDirection: 'row'
   },
   navbarTitle: {
