@@ -43,6 +43,7 @@ class App extends React.Component {
       Home: { screen: FirebaseReactNative },
       Details: { screen: WordItem },
       Daily : {screen: WordOfTheDay},
+
     });
 
   return(

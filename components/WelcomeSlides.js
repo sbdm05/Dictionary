@@ -1,7 +1,11 @@
 'use strict';
 import React, {Component} from 'react';
+import StatusBar from './StatusBar';
 import ReactNative from 'react-native';
 import Slides from './Slides';
+import {
+  StackNavigator,
+} from 'react-navigation';
 
 const {
   AppRegistry,
@@ -24,12 +28,17 @@ const SLIDE_DATA = [
 
 class WelcomeSlides extends Component{
 
+  static navigationOptions = {
+    header: null
+  };
+
   onSlidesComplete = () => {
     this.props.navigation.navigate('Home');
   }
 
   render(){
     return (
+
       <Slides data={SLIDE_DATA} onComplete={this.onSlidesComplete} />
     );
   }
