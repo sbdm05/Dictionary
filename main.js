@@ -25,7 +25,8 @@ const {
   TouchableHighlight,
   TouchableOpacity,
   Animated,
-  Switch
+  Switch,
+  AsyncStorage
 } = ReactNative;
 
 

@@ -22,8 +22,8 @@ const {
 
 const SLIDE_DATA = [
   { text: 'Welcome to StreetFrench Dictionary', color: '#03A9F4' },
-  { text: 'Words & Expressions from real french people', color: '#009688' },
-  { text: 'Learn true french now !', color: '#03A9F4' }
+  { text: 'Words & Expressions from real french people, you will not find in any other dictionary!', color: '#009688' },
+  { text: 'Start now !', color: '#03A9F4' }
 ];
 
 class WelcomeSlides extends Component{
