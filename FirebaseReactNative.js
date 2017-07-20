@@ -133,8 +133,8 @@ class FirebaseReactNative extends Component {
               handleResults={this._handleResults.bind(this)}
               showOnLoad
               allDataOnEmptySearch
-              hideBack="true"
-              autoCorrect= "false"
+              hideBack
+              autoCorrect= {false}
             />
 
               <ListView
