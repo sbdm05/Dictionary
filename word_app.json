@@ -1,16 +1,16 @@
 {
     "items": {
-        "t'es bonne": {
-            "french": "you're good",
-            "english": "hot chick",
+        "Bonne": {
+            "french": "Bonne, t'es bonne",
+            "english": "Beautiful, sexy woman, usually said in the street by someone you don't know",
             "english_erudite": "very attractive woman",
-            "likes":"0",
+            "likes":0
             },
-          "Test 2": {
-            "french": "galère!",
-            "english": "mess",
+          "Galère": {
+            "french": "Galère",
+            "english": "a mess, a situation difficult to handle",
             "english_erudite": "a complicated situation",
-            "likes":"0",
+            "likes":0
             }
           }
 }
