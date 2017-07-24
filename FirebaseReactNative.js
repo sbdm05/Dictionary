@@ -12,6 +12,9 @@ import WordOfTheDay from './components/WordOfTheDay';
 import { List, ListItem } from 'react-native-elements';
 import SplashScreen from './components/SplashScreen';
 import Animation from 'lottie-react-native';
+import verlan from './verlan';
+import expressions from './expressions'
+
 const styles = require('./styles.js');
 
 
@@ -24,12 +27,14 @@ const {
   TouchableHighlight,
   TouchableOpacity,
   Animated,
-  Switch
+  Switch,
+  AsyncStorage
 } = ReactNative;
 
 
 import {
   StackNavigator,
+  TabNavigator
 } from 'react-navigation';
 
 
@@ -107,7 +112,7 @@ class FirebaseReactNative extends Component {
 
 
  componentDidMount() {
-    this.listenForItems(this.itemsRef);
+     this.listenForItems(this.itemsRef);
   }
 
 
@@ -157,6 +162,7 @@ class FirebaseReactNative extends Component {
 
 _renderItem(item) {
      const { navigate } = this.props.navigation;
+
      return (
       <ListItem
         title={

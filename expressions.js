@@ -9,11 +9,11 @@ import ListOfWords from './components/ListOfWords';
 import WordItem from './components/WordItem';
 import Spinner from './components/common/Spinner';
 import WordOfTheDay from './components/WordOfTheDay';
-import WelcomeSlides from './components/WelcomeSlides';
-import expressions from './expressions';
-import FirebaseReactNative from './FirebaseReactNative';
 import { List, ListItem } from 'react-native-elements';
+import SplashScreen from './components/SplashScreen';
 import Animation from 'lottie-react-native';
+import verlan from './verlan';
+
 const styles = require('./styles.js');
 
 
@@ -37,23 +37,17 @@ import {
 } from 'react-navigation';
 
 
-class App extends React.Component {
-
+class expressions extends Component{
   render(){
-      const MainNavigator =
-      StackNavigator({
-      WelcomeSlides: {screen: WelcomeSlides},
-      Home: { screen: FirebaseReactNative },
-      Details: { screen: WordItem },
-      Daily : {screen: WordOfTheDay},
-      });
-
-
-  return(
-    <MainNavigator />
-    );
+    return(
+      <View>
+        <Text>
+          Test
+        </Text>
+      </View>
+      );
   }
-
 }
 
-Expo.registerRootComponent(App);
+
+export default expressions;
