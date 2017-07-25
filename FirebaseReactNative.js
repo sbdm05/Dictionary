@@ -93,7 +93,8 @@ class FirebaseReactNative extends Component {
           english_erudite: child.val().english_erudite,
           likes: child.val().likes,
           _key: child.key,
-          mobile_share: child.val().mobile_share
+          mobile_share: child.val().mobile_share,
+          howto: child.val().howto
         });
       });
 
@@ -167,12 +168,13 @@ _renderItem(item) {
      return (
       <ListItem
         title={
-               <ListOfWords item={item} onPress={() =>
-               navigate('Details', {...item} )} />
+               <ListOfWords item={item}
+               onPress={() => navigate('Details', {...item} )}
+               />
                }
         onPressRightIcon= {()=>
-               navigate('Details', {...item} )
-              }
+               navigate('Details', {...item} )}
+        titleStyle={styles.liText}
         />
       );
 }

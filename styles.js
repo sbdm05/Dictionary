@@ -25,7 +25,20 @@ var styles = StyleSheet.create({
   },
   liText: {
     color: '#333',
+    fontSize: 20,
+    marginBottom: 20
+  },
+  MeaningText: {
+    color: '#333',
     fontSize: 16,
+    marginBottom: 20,
+    fontWeight: "700"
+  },
+    HowTotext: {
+    color: '#333',
+    fontSize: 16,
+    fontStyle: 'italic',
+    marginBottom: 20
   },
   navbar: {
     alignItems: 'center',
