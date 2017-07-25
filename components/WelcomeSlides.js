@@ -68,7 +68,7 @@ class WelcomeSlides extends Component{
             }else{
               this.setState({ShowWelcomeSlides: 'true'});
               console.log('token is not present');
-              this._setValue();
+              this._setValue().done;
 
             }
         }; // Close _renderWelcomeSlidesWith...

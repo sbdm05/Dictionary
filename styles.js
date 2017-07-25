@@ -33,7 +33,7 @@ var styles = StyleSheet.create({
     borderBottomColor: '#eee',
     borderColor: 'transparent',
     borderWidth: 1,
-    /*justifyContent: 'center',*/
+    justifyContent: 'center',
     height: 44,
     flexDirection: 'row'
   },

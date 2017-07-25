@@ -92,7 +92,8 @@ class FirebaseReactNative extends Component {
           english: child.val().english,
           english_erudite: child.val().english_erudite,
           likes: child.val().likes,
-          _key: child.key
+          _key: child.key,
+          mobile_share: child.val().mobile_share
         });
       });
 
