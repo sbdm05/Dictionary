@@ -9,10 +9,10 @@ import ListOfWords from './components/ListOfWords';
 import WordItem from './components/WordItem';
 import Spinner from './components/common/Spinner';
 import WordOfTheDay from './components/WordOfTheDay';
+import WelcomeSlides from './components/WelcomeSlides';
+import expressions from './expressions';
+import FirebaseReactNative from './FirebaseReactNative';
 /*import { List, ListItem } from 'react-native-elements';*/
-import SplashScreen from './components/SplashScreen';
-import verlan from './verlan';
-
 const styles = require('./styles.js');
 
 
@@ -30,25 +30,31 @@ const {
 } = ReactNative;
 
 
-/*import {
+import {
   StackNavigator,
   TabNavigator
-} from 'react-navigation';*/
+} from 'react-navigation';
 
 
-class expressions extends Component{
-
+class MainStackNavigator extends React.Component {
 
   render(){
-    return(
-      <View>
-        <Text>
-          Test
-        </Text>
-      </View>
-      );
+      const MainStackNavigator =
+      StackNavigator({
+      WelcomeSlides: {screen: WelcomeSlides},
+      Home: { screen: FirebaseReactNative },
+      Details: { screen: WordItem }
+    },{
+      initialRouteName: 'Home',
+    });
+
+
+
+  return(
+    <MainStackNavigator />
+    );
   }
+
 }
 
-
-export default expressions;
+export default MainStackNavigator;

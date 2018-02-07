@@ -11,7 +11,6 @@ import Spinner from './components/common/Spinner';
 import WordOfTheDay from './components/WordOfTheDay';
 import { List, ListItem } from 'react-native-elements';
 import SplashScreen from './components/SplashScreen';
-import Animation from 'lottie-react-native';
 import verlan from './verlan';
 import expressions from './expressions'
 
@@ -32,10 +31,10 @@ const {
 } = ReactNative;
 
 
-import {
+/*import {
   StackNavigator,
-  TabNavigator
-} from 'react-navigation';
+  TabNavigator,
+} from 'react-navigation';*/
 
 
 
@@ -51,10 +50,12 @@ const firebaseConfig = {
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 
+
 class FirebaseReactNative extends Component {
 
  static navigationOptions = {
     title: 'Street French !',
+    TabBarLabel: 'Home',
   };
 
 
@@ -121,6 +122,8 @@ class FirebaseReactNative extends Component {
   render() {
     const { navigate } = this.props.navigation;
 
+    const {goBack} = this.props.navigation;
+
     if (this.state.loading) {
       return (
          <Spinner />
@@ -138,7 +141,7 @@ class FirebaseReactNative extends Component {
               ref={(ref) => this.searchBar = ref}
               data={this.state.items}
               handleResults={this._handleResults.bind(this)}
-              showOnLoad
+              showOnLoad = {false}
               allDataOnEmptySearch
               hideBack
               autoCorrect= {false}
@@ -156,7 +159,9 @@ class FirebaseReactNative extends Component {
               />
 
 
+
           </View>
+
           )
       }
   }
@@ -174,7 +179,8 @@ _renderItem(item) {
                }
         onPressRightIcon= {()=>
                navigate('Details', {...item} )}
-        titleStyle={styles.liText}
+        onPress= {()=>
+               navigate('Details', {...item} )}
         />
       );
 }
@@ -185,7 +191,6 @@ _renderItem(item) {
   }
 
 }
-
 
 
 export default FirebaseReactNative;

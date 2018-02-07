@@ -11,7 +11,14 @@ const {
   TouchableOpacity,
 } = ReactNative;
 
+                        //Initialize Firebase
+                        var config = {
+                        apiKey: "AIzaSyDWedZY1svNHxPUi2ReQJTlCf9Q60407E8",
+                        authDomain: "streetfrench-a84df.firebaseapp.com",
+                        databaseURL: "https://streetfrench-a84df.firebaseio.com"
+                        };
 
+                        var ref = firebase.database().ref();
 
 
 
@@ -26,11 +33,12 @@ class FullList extends Component{
 }
 
 
+
 componentWillMount() {
-  // const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-  //   this.setState({
-  //       dataSource: ds.cloneWithRows(this.props.items)
-  //   });
+  const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+    this.setState({
+        dataSource: ds.cloneWithRows(this.props.items)
+    });
 
 }
 
@@ -38,7 +46,8 @@ componentWillMount() {
 
 
   render(){
-
+const {english, english_erudite, likes, _key, french, mobile_share, howto} = this.props.navigation.state.params;
+ const { navigate } = this.props.navigation;
 
     return(
       <Card

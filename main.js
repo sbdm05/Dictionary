@@ -10,10 +10,13 @@ import WordItem from './components/WordItem';
 import Spinner from './components/common/Spinner';
 import WordOfTheDay from './components/WordOfTheDay';
 import WelcomeSlides from './components/WelcomeSlides';
+import FullList from './components/FullList';
+import MainStackNavigator from './MainStackNavigator';
 import expressions from './expressions';
 import FirebaseReactNative from './FirebaseReactNative';
 import { List, ListItem } from 'react-native-elements';
-import Animation from 'lottie-react-native';
+
+
 const styles = require('./styles.js');
 
 
@@ -39,18 +42,24 @@ import {
 
 class App extends React.Component {
 
+
+
   render(){
       const MainNavigator =
-      StackNavigator({
-      WelcomeSlides: {screen: WelcomeSlides},
-      Home: { screen: FirebaseReactNative },
-      Details: { screen: WordItem },
-      Daily : {screen: WordOfTheDay},
-      });
+      TabNavigator(
+      {
+        Home: {screen: MainStackNavigator},
+        Expressions : {screen : expressions},
+      }, {
+        initialRouteName: 'Home',
+      }
+      );
+
 
 
   return(
-    <MainNavigator />
+    <MainNavigator
+    />
     );
   }
 

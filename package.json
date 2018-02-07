@@ -8,13 +8,14 @@
   "dependencies": {
     "@expo/ex-navigation": "^3.0.0",
     "babel-preset-react-native-stage-0": "^1.0.1",
-    "expo": "17.0.0",
+    "expo": "^24.0.0",
     "firebase": "^4.1.2",
-    "lottie-react-native": "^1.1.1",
-    "react": "16.0.0-alpha.6",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-17.0.0.tar.gz",
-    "react-native-searchbar": "^1.11.0",
-    "react-navigation": "^1.0.0-beta.11"
+    "react": "16.0.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-24.0.0.tar.gz",
+    "react-native-elements": "^0.19.0",
+    "react-native-searchbar": "^1.14.0",
+    "react-native-vector-icons": "^4.5.0",
+    "react-navigation": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^4.2.0",

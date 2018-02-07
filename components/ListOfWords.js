@@ -4,6 +4,10 @@ const { View, TouchableHighlight, Text } = ReactNative;
 
 
 class ListOfWords extends Component {
+
+
+
+
   render() {
     return (
       <TouchableHighlight onPress={this.props.onPress}>

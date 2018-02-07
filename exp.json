@@ -1,9 +1,9 @@
 {
   "name": "street-french-dictionary",
-  "description": "An empty new project",
+  "description": "StreetFrench dictionary is a free app to learn true french. Slang, Verlan, Expressions.",
   "slug": "street-french-dictionary",
   "privacy": "public",
-  "sdkVersion": "17.0.0",
+  "sdkVersion": "24.0.0",
   "version": "1.0.0",
   "orientation": "portrait",
   "primaryColor": "#cccccc",
