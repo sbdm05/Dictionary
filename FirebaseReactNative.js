@@ -27,7 +27,8 @@ const {
   TouchableOpacity,
   Animated,
   Switch,
-  AsyncStorage
+  AsyncStorage, 
+  ScrollView
 } = ReactNative;
 
 
@@ -54,7 +55,7 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 class FirebaseReactNative extends Component {
 
  static navigationOptions = {
-    title: 'Street French !',
+    title: 'Street Urban Dictionary',
     TabBarLabel: 'Home',
   };
 
@@ -71,7 +72,7 @@ class FirebaseReactNative extends Component {
       items: [],
       loading: true
     };
-    this.itemsRef = this.getRef().child('items').limitToLast(4);
+    this.itemsRef = this.getRef().child('items').limitToLast(8);
     this._handleResults = this._handleResults.bind(this);
   }
 
@@ -131,7 +132,7 @@ class FirebaseReactNative extends Component {
       }
       else{
         return(
-          <View style={styles.container}>
+          <ScrollView style={styles.container}>
 
 
             <StatusBar title="Street French, best app to learn true french !" />
@@ -141,7 +142,7 @@ class FirebaseReactNative extends Component {
               ref={(ref) => this.searchBar = ref}
               data={this.state.items}
               handleResults={this._handleResults.bind(this)}
-              showOnLoad = {false}
+              showOnLoad = {true}
               allDataOnEmptySearch
               hideBack
               autoCorrect= {false}
@@ -160,7 +161,7 @@ class FirebaseReactNative extends Component {
 
 
 
-          </View>
+          </ScrollView>
 
           )
       }

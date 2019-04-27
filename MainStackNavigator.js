@@ -45,7 +45,7 @@ class MainStackNavigator extends React.Component {
       Home: { screen: FirebaseReactNative },
       Details: { screen: WordItem }
     },{
-      initialRouteName: 'Home',
+      initialRouteName: 'WelcomeSlides',
     });
 
 
