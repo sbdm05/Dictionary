@@ -1,12 +1,11 @@
 
-import Expo from "expo";
 import React from "react";
 import ReactNative from "react-native";
 import MainStackNavigator from "./MainStackNavigator";
 
 import { TabNavigator } from "react-navigation";
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     const MainNavigator = TabNavigator(
       {
@@ -21,5 +20,3 @@ class App extends React.Component {
     return <MainNavigator />;
   }
 }
-
-Expo.registerRootComponent(App);
