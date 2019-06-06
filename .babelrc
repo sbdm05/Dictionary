@@ -1,13 +1,15 @@
 {
   "presets": [
-    "react-native",
     "babel-preset-expo",
-    "react-native-dotenv",
-    "babel-preset-react-native-stage-0"
+    // "module:react-native",
+    // "module:react-native-dotenv",
+    "module:metro-react-native-babel-preset"
   ],
   "env": {
     "development": {
-      "plugins": ["transform-react-jsx-source"]
+      "plugins": [
+        "@babel/plugin-transform-react-jsx-source"
+      ]
     }
   }
 }
